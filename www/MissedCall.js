@@ -1,5 +1,4 @@
-function greetMe(){
-	var name = "Hi!!";
+function missedCall(){
 	cordova.exec(missedCallSuccess, missedCallFailure, "MissedCallPlugin", "missedCall", [name]);
 }
 
@@ -11,4 +10,4 @@ function missedCallFailure(data){
 	alert("FAIL: " + data);
 }
 
-greetMe();
+missedCall();
