@@ -1,5 +1,5 @@
 function missedCall(){
-	cordova.exec(missedCallSuccess, missedCallFailure, "MissedCallPlugin", "missedCall", [name]);
+	cordova.exec(missedCallSuccess, missedCallFailure, "MissedCallPlugin", "missedCall", []);
 }
 
 function missedCallSuccess(data){
