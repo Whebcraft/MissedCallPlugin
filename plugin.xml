@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+            id="com.revivalx.MissedCallPlugin" version="0.0.1">
+        <name>Missed Call Plugin</name>
+        <description>Cordova Missed Call Plugin</description>
+        <license>Apache 2.0</license>
+        <keywords>cordova,missed call</keywords>
+        <js-module src="www/MissedCall.js" name="MissedCall">
+            <clobbers target="MissedCall" />
+        </js-module>
+        <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="MissedCallPlugin" >
+                <param name="android-package" value="com.revivalx.MissedCallPlugin"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+        </config-file>
+        <source-file src="src/android/MissedCallPlugin.java" target-dir="src/com/revivalx/MissedCallPlugin" />
+    </platform>
+    </plugin>
